@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  	<link rel="stylesheet" href="signin.css" />
+    <meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
+    <title>Log In</title>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+  </head>
+  <body>
+  	
+  	<div class="top"></div> 
+
+  	<table id="logintable" >
+  		<tr >
+  			<td align="center">
+  				<img id="leaf" src="transparentleaf.png" alt="Sycamore Leaf"></img>
+  			</td>
+  			
+  			<td align="center">
+  				<div id="name">\<h1>Sycamore Calendar</h1></div>
+  				<div class="g-signin2" data-onsuccess="onSignIn" data-theme="light"></div>
+  			</td>
+  		</tr>
+  	</table>
+  
+ 
+
+  		
+  		
+    
+    <script>
+      function onSignIn(googleUser) {
+        // Useful data for your client-side scripts:
+        var profile = googleUser.getBasicProfile();
+        console.log("ID: " + profile.getId()); // Don't send this directly to your server!
+        console.log('Full Name: ' + profile.getName());
+        console.log('Given Name: ' + profile.getGivenName());
+        console.log('Family Name: ' + profile.getFamilyName());
+        console.log("Image URL: " + profile.getImageUrl());
+        console.log("Email: " + profile.getEmail());
+
+        // The ID token you need to pass to your backend:
+        var id_token = googleUser.getAuthResponse().id_token;
+        console.log("ID Token: " + id_token);
+      };
+    </script>
+  	
+  	
+  	
+  	<div id="bottomofpage"></div> 
+  
+    
+  </body>
+</html>
