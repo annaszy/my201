@@ -23,6 +23,33 @@ body {
 	padding-top:25px;
 }
 
+#syccal{
+	padding-left:50px;
+	padding-top:25px;
+}
+
+.outerprofile{
+	border: 5px solid red;
+	border-collapse: collapse;
+}
+
+#outerprofiletable{
+	margin-top:50px;
+	margin-left:50px;
+}
+
+#upcomingbox{
+	border: 5px solid red;
+	border-collapse: collapse;
+	padding-left: 50px;
+	font-size: 36px;
+}
+
+.bodyfont{
+	font-family: American Typewriter;
+}
+
+
 #bottomofpage{
 	width: 100%;
 	height: 100px;
@@ -41,7 +68,7 @@ body {
     margin-right:auto;
     margin-top:auto;
     margin-bottom:auto;
-    padding-top: 150px;
+    padding-top: 100px;
   }
   
 #logggedintable {
@@ -51,10 +78,31 @@ body {
     margin-bottom:auto;
     color: white;
   }
+
+#hometabletr{
+	border: 3px solid #898989;
+	border-collapse: collapse
+} 
+  
+#hometable{
+	border: 3px solid #898989;
+	border-collapse: collapse;
+	margin-left: 80px;
+}
+
+a{
+	color: white;
+	text-decoration: none;
+}
  
+#homeword{
+	font-size: 36px;
+	color:black;
+	padding-top: 40px;
+	padding-left: 40px;
+}
 
-
-h1 {
+#name {
    font-family: Impact, Charcoal, sans-serif;
    color: white;
    font-size: 70px;
