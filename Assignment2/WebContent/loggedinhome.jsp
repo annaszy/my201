@@ -1,13 +1,16 @@
 
 <!-- make sure it says signed in instead of sign in -->
-<!-- 
+
 <!DOCTYPE html>
 <html>
 		
 	<head>
 		<link rel="stylesheet" href="signin.css" />
+		<meta name="google-signin-scope" content="profile email">
+    	<meta name="google-signin-client_id" content="327794825592-d502jq1gd9c1mr9ibijs2sc428qo8bot.apps.googleusercontent.com">
 		<meta charset="UTF-8">
 		<title>Logged In</title>
+		<script src="https://apis.google.com/js/platform.js" async defer></script>
 	</head>
 	<body>
 	
@@ -39,5 +42,3 @@
 
 	</body>
 </html>
-
- -->

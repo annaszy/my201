@@ -1,4 +1,3 @@
-<!--  
 <!DOCTYPE html>
 <html>
 	<head>
@@ -32,5 +31,3 @@
 		<div id="bottomofpage"></div>
 	</body>
 </html>
-
--->

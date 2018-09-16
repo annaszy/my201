@@ -1,11 +1,9 @@
-<!--  
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
   	<link rel="stylesheet" href="signin.css" />
     <meta name="google-signin-scope" content="profile email">
-    <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
+    <meta name="google-signin-client_id" content="327794825592-d502jq1gd9c1mr9ibijs2sc428qo8bot.apps.googleusercontent.com">
     <title>Log In</title>
     <script src="https://apis.google.com/js/platform.js" async defer></script>
   </head>
@@ -25,16 +23,9 @@
   			</td>
   		</tr>
   	</table>
- --> 
-<!-- 
- Client ID
-327794825592-d502jq1gd9c1mr9ibijs2sc428qo8bot.apps.googleusercontent.com
-Client Secret
-eo9RubSBmjUY_xteHPSaDgoB
- -->
+  
 
   		
-  <!--  		
     
     <script>
       function onSignIn(googleUser) {
@@ -52,13 +43,21 @@ eo9RubSBmjUY_xteHPSaDgoB
         console.log("ID Token: " + id_token);
       };
     </script>
+    
+    <!-- -------------------------------------------------------------------------------------------------------- -->
+
+  	sessionStorage.setItem("id", "profile.getId()");
+  	sessionStorage.setItem("fullname","profile.getName()");
+  	sessionStorage.setItem("givenname", "profile.getGivenName()");
+  	sessionStorage.setItem("familyname", "profile.getFamilyName()");
+  	sessionStorage.setItem("imageurl", "profile.getImageUrl()");
+  	sessionStorage.setItem("email","profile.getEmail()");
   	
   	
+  	<!-- -------------------------------------------------------------------------------------------------------- -->
   	
   	<div id="bottomofpage"></div> 
   
     
   </body>
 </html>
-
--->
