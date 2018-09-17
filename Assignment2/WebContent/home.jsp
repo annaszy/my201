@@ -23,7 +23,17 @@
 		<table id="hometable" style="width:90%;">
 			<tr id="hometabletr" align="center"><td style="height:200px;">Profile Picture</td></tr>
 			<tr id="hometabletr" align="center"><td style="height:50px;">Firstname Lastname</td></tr>
-			<tr id="hometabletr" align="center"><td style="height:300px;">Event Chart</td></tr>
+			<tr id="eventstable" align="center"><td style="height:300px;">Event Chart
+			
+				<form>
+					<input id="longeventtitle" type="text" name="eventtitle">
+					<input class="eventformbox" type="text" name="startdate">
+					<input type="text" name="enddate">
+					<input type="text" name="starttime">
+					<input type="text" name="endtime">
+				</form>
+				
+			</td></tr>
 		</table>
 
 

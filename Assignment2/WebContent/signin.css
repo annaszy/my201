@@ -81,13 +81,23 @@ body {
 
 #hometabletr{
 	border: 3px solid #898989;
-	border-collapse: collapse
+	border-collapse: collapse;
 } 
+
+#eventstable{
+	border: 3px solid #898989;
+	border-collapse: collapse;
+	background-color: #898989;
+}
   
 #hometable{
 	border: 3px solid #898989;
 	border-collapse: collapse;
 	margin-left: 80px;
+}
+
+#longeventtitle{
+	background-color: #898989;
 }
 
 a{

@@ -3,6 +3,11 @@
   
 
 	<head>
+	
+	<script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
 
 		<link rel="stylesheet" href="signin.css" />
 		<meta charset="UTF-8">
@@ -27,14 +32,15 @@
   	 
 	<table id="outerprofiletable" class="outerprofile" style="width:90%;">
 		<tr >
-			<td id="upcomingbox" align="left" style="width:60%; height:100px;"></td>
+			<td id="upcomingbox" align="left" style="width:60%; height:100px;">Upcoming Events</td>
 			<td class="outerprofile" align="center" style="width:40%; height:100px;">Leave Blank</td>
 		</tr>
 		
 		<tr>
 			<td class="outerprofile" id="test" align="center" style="width:60%;"> <!-- this where the events will go --></td>
-			<td class="outerprofile"  align="center" style="width:40%; height:500px;"> 
-				<img src="sessionStorage.getItem("imageurl")"/>
+			<td class="outerprofile" align="center" style="width:40%; height:500px;">
+				<img id = "profpic" ></img>
+				
 			</td>
 		</tr>
 	</table>
@@ -46,7 +52,14 @@
 	
 	
 	     <pre id="content"></pre>
-	
+	     <!-- 
+	     <script>
+	     
+	     	function load(){
+	     		document.getInnerHtml.getElementById("profpic").src = sessionStorage.getItem("imageurl");
+	     	}
+	     </script>
+	 -->
 	    <script type="text/javascript">
 	      // Client ID and API key from the Developer Console
 	      var CLIENT_ID = '327794825592-d502jq1gd9c1mr9ibijs2sc428qo8bot.apps.googleusercontent.com';
@@ -84,6 +97,8 @@
 	
 	          // Handle the initial sign-in state.
 	          updateSigninStatus(gapi.auth2.getAuthInstance().isSignedIn.get());
+	          
+	          console.log("initClient");
 
 	        });
 	      }
@@ -94,6 +109,7 @@
 	       */
 	      function updateSigninStatus(isSignedIn) {
 	        if (isSignedIn) {
+	        	console.log("UpdateSigninStatus if");
 
 	          listUpcomingEvents();
 	        } else {
@@ -145,6 +161,7 @@
 	        }).then(function(response) {
 	          var events = response.result.items;
 	          //appendPre('Upcoming events:');
+	          console.log("listUpcomingEvents then");
 	          
 	          var eventtable = "<table><tr><th>Date</th><th>Time</th><th>Event Summary</th></tr></table>";
 	          if (events.length > 0) {
@@ -164,12 +181,12 @@
 	                var thehour = thedate.getHours(); //this returns in military time
 	                var min = thedate.getMinutes();
 	                
-	                if(theminute<10){theminute = String(theminute)}
+	                if(min<10){theminute = "0"+String(min);}
 	                var thetime = thehour+':'+theminute; //adapt for am and pm later
 	                
 	                console.log(theyear);
 	                
-	                eventtable += String("<tr><td>"+themonth+" "+theday+", "+theyear+" <td><td>"+thetime+"</td><td>"+event.summary+"</td></tr> "); //do you need to cast as string?
+	                eventtable += String("<tr><td>"+themonth+" "+theday+", "+theyear+" <td><td>"+thetime+" </td><td>"+event.summary+"</td></tr> "); //do you need to cast as string?
 	              
 	              	
 	              //}
@@ -192,6 +209,10 @@
 	    <script async defer src="https://apis.google.com/js/api.js"
 	      onload="this.onload=function(){};handleClientLoad()"
 	      onreadystatechange="if (this.readyState === 'complete') this.onload()">
+	    </script>
+	    
+	    <script>
+	    	document.getElementById("profpic").src = sessionStorage.getItem("imageurl");
 	    </script>
     
     
